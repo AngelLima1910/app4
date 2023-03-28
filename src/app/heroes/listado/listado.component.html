@@ -1,0 +1,29 @@
+<h2>Listado de heroes</h2>
+<ol>
+    <li *ngFor="let heroe of heroes"> {{heroe}} </li>
+</ol>
+<table border="2">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>{{ usuario.id}}</td>
+            <td>{{ usuario.nombre}}</td>
+        </tr>
+    </tbody>
+</table>
+<ng-container *ngFor="let hobby of hobbys">
+    <div>{{ hobby.id }}</div>
+    <div>{{ hobby.nombre }}</div>
+</ng-container>
+
+<div *ngIf="mayorEdad(22)">
+    <p>Eres mayor de edad</p>
+</div>
+<div *ngIf="!mayorEdad(2)">
+    <p>Eres menor de edad</p>
+</div>
